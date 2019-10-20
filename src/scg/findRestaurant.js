@@ -1,4 +1,4 @@
-import config from '../config/localhost';
+import config from '../config';
 export default async function findRestaurant(req, res, next) {
     var request = require('request');
     try {
