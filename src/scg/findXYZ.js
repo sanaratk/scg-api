@@ -17,23 +17,9 @@ export default async function findXYZ(req, res, next) {
 
   let rs = {};
   for (let index = 0; index < var_serie.length; index++) {
-    // console.log('type', typeof (var_serie[index]));
     if (typeof (var_serie[index]) !== 'number'){
-      console.log('var', var_serie[index]);
-      console.log('serie', serie[index]);
-
       rs[var_serie[index]] = serie[index];
-      // console.log('rs', rs);
     }
-    // const element = array[index];
-
   }
-  // console.log('rs', rs);
-  // let result = {
-  //   interval: interval,
-  //   message: serie,
-  //   result: rs['X']
-  // }
   res.send({ 'data': rs })
-  // res.send({ 'data': interval });
 }
