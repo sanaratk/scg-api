@@ -23,16 +23,17 @@ export default async function findXYZ(req, res, next) {
       console.log('serie', serie[index]);
 
       rs[var_serie[index]] = serie[index];
-      console.log('rs', rs);
+      // console.log('rs', rs);
     }
     // const element = array[index];
 
   }
-  console.log('rs', rs);
-  let result = {
-    interval: interval,
-    message: serie,
-    result: rs['X']
-  }
-  res.send(rs)
+  // console.log('rs', rs);
+  // let result = {
+  //   interval: interval,
+  //   message: serie,
+  //   result: rs['X']
+  // }
+  res.send({ 'data': rs })
+  // res.send({ 'data': interval });
 }

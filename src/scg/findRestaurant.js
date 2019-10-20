@@ -16,7 +16,7 @@ export default async function findRestaurant(req, res, next) {
             // console.log('body:', body); // Print the HTML for the Google homepage.
             const rs = JSON.parse(body);
             
-            res.send({ "count": rs.results.length ,"results" :rs.results});
+            res.send({ 'data' :rs.results});
 
         });
     } catch (error) {
